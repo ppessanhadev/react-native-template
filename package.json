@@ -2,12 +2,17 @@
   "name": "mapping-store-managment",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "lint-staged": {
+    "*.{ts,tsx}": "prettier --write"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "expo": "~44.0.0",
@@ -32,6 +37,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
     "prettier": "^2.5.1",
     "typescript": "~4.3.5"
   },
